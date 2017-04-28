@@ -198,7 +198,7 @@ class action_plugin_mmnotifier extends DokuWiki_Action_Plugin {
 
                 // submit payload
                 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-                curl_setopt($ch, CURLOPT_POSTFIELDS, array('payload' => $json));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, array($json));
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 $result = curl_exec($ch);
 
